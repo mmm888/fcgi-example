@@ -1,0 +1,7 @@
+#!/bin/sh                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                              
+PROFILE_PATH=/root/XXX                                                                                                                                                                                                      
+BIN_PATH=XXX                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                              
+docker cp "lenet-web:${PROFILE_PATH}" .                                                                                                                                                                                                       
+go tool pprof "${BIN_PATH}" $(basename "${PROFILE_PATH}") 
